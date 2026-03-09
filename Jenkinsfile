@@ -11,11 +11,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/zore21/spring-petclinic'
-            }
-        }
         stage('Build Jar') {
             steps {
                 bat 'mvn clean package -DskipTests'
